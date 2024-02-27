@@ -1,0 +1,11 @@
+<!-- app/views/employees/show.html.erb -->
+<h1><%= @employee.name %></h1>
+<p>Department: <%= @employee.department.name %></p>
+
+<h2>Tickets</h2>
+  <% @employee.tickets_age_desc.each do |ticket| %>
+    <ul>
+      <li><%= ticket.subject %></li>
+    </ul>
+  <% end %>
+
